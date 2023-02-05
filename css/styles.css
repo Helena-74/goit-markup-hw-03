@@ -37,6 +37,18 @@ ul {
 img {
   display: block;
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
 .page {
   font-family: "Roboto", sans-serif;
@@ -44,16 +56,15 @@ img {
   color: var(--main-title-color);
 }
 .container {
-  display: flex;
-  align-items: center;
-  width: 100%;
   max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+}
 
-  box-sizing: border-box;
+.cont-pre {
+  display: flex;
+  align-items: center;
 }
 
 .page-header {
@@ -120,6 +131,9 @@ img {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
+
+  padding: 24px 0;
+
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -145,6 +159,10 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-title-color);
 }
+.site-address .link {
+  padding: 24px 0;
+}
+
 .site-address .item + .item {
   margin-left: 40px;
 }
@@ -161,46 +179,41 @@ img {
 }
 /*Hero*/
 .hero-title {
+  padding: 188px 0;
+  text-align: center;
   color: var(--main-text-color);
   background: var(--main-title-color);
 }
 .hero-pre-title {
   font-weight: 700;
+  width: 496px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  padding: 188px 300px 292px;
 }
+
+/*Button*/
 .hero-btn-activ {
   cursor: pointer;
-  font-family: inherit;
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  letter-spacing: 0.04em;
+  border: none;
   padding: 16px 32px;
-  gap: 10px;
+
   color: var(--main-text-color);
   background: var(--main-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
-  position: absolute;
-
-  left: 526px;
-  top: 356px;
   margin-top: 48px;
 }
 
@@ -219,7 +232,7 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   display: flex;
   align-items: center;
   text-align: center;
@@ -249,6 +262,7 @@ img {
   order: 0;
   flex-grow: 0;
   background: var(--second-btn-color);
+  margin-bottom: 72px;
 }
 
 .button-primary .btn:hover,
@@ -259,66 +273,49 @@ img {
 
 /*Section*/
 .section {
+  padding: 120px 0;
   color: var(--main-text-color);
 }
+
+.section-cont {
+  padding-top: 0;
+}
 .section .item {
-  display: flex;
-  align-items: center;
 }
 .section .item + .item {
   margin-left: 24px;
 }
 
 .section-link {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 .section-title {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  padding-top: 120px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /*Section Out Team*/
 
 .section-pre-title {
-  position: absolute;
-
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
-  display: block;
 
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--second-title-color);
-  padding-top: 120px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .section-team-title {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -326,24 +323,20 @@ img {
   text-align: center;
 
   color: var(--second-title-color);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  margin-bottom: 8px;
+}
+
+.text-team {
   padding-top: 32px;
-  padding-bottom: 8px;
+  padding-bottom: 32px;
 }
 .section-team-link {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--main-title-color);
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 .list .section-list + .section-list {
   margin-left: 24px;
@@ -355,7 +348,20 @@ img {
   background: var(--main-text-color);
 }
 .section-list-item {
+  margin-bottom: 48px;
   background: var(--main-text-color);
+}
+/*Portfolio*/
+.section-pre {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+.section-pre-list {
+  display: flex;
+  justify-content: center;
+}
+.gallery {
+  padding: 32px 0 32px 16px;
   border: 1px solid var(--second-btn-color);
 }
 
@@ -367,14 +373,19 @@ img {
   margin-left: 24px;
 }
 
+.section-portfolio .section-list-item + .section-list-item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
 /*Footer*/
 
 .footer {
+  padding: 100px 0;
   background: var(--second-title-color);
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
-  font-style: normal;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -383,12 +394,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--background-color);
-  padding-top: 100px;
-  padding-bottom: 188px;
+  margin-bottom: 16px;
 }
 .footer-span {
   font-family: "Raleway", sans-serif;
-  font-style: normal;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -402,30 +412,12 @@ img {
   flex-grow: 0;
 }
 
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-}
 .footer-link {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--second-btn-color);
   width: calc((100%-60px) / 4);
-  padding-top: 16px;
-}
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  margin-bottom: 16px;
 }
